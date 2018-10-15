@@ -14,14 +14,9 @@
 		3F1E2FCA216CA8920051CF17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E2FC8216CA8920051CF17 /* LaunchScreen.storyboard */; };
 		3F1E2FD5216CA8920051CF17 /* WeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2FD4216CA8920051CF17 /* WeatherForecastTests.swift */; };
 		3F1E2FE0216CA8920051CF17 /* WeatherForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2FDF216CA8920051CF17 /* WeatherForecastUITests.swift */; };
-		41D5048E21706ACC00E493A1 /* WeatherForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5048D21706ACC00E493A1 /* WeatherForecastModel.swift */; };
-		41D50496217325E900E493A1 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5048F217325E900E493A1 /* Flags.swift */; };
-		41D50497217325E900E493A1 /* Currently.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50490217325E900E493A1 /* Currently.swift */; };
 		41D50498217325E900E493A1 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50491217325E900E493A1 /* Daily.swift */; };
 		41D50499217325E900E493A1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50492217325E900E493A1 /* Data.swift */; };
-		41D5049A217325E900E493A1 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50493217325E900E493A1 /* Json4Swift_Base.swift */; };
-		41D5049B217325E900E493A1 /* Minutely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50494217325E900E493A1 /* Minutely.swift */; };
-		41D5049C217325E900E493A1 /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50495217325E900E493A1 /* Hourly.swift */; };
+		41D5049A217325E900E493A1 /* WeatherForecastBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D50493217325E900E493A1 /* WeatherForecastBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +50,9 @@
 		3F1E2FDB216CA8920051CF17 /* WeatherForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1E2FDF216CA8920051CF17 /* WeatherForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITests.swift; sourceTree = "<group>"; };
 		3F1E2FE1216CA8920051CF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41D5048D21706ACC00E493A1 /* WeatherForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastModel.swift; sourceTree = "<group>"; };
-		41D5048F217325E900E493A1 /* Flags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flags.swift; path = ../../../Downloads/Flags.swift; sourceTree = "<group>"; };
-		41D50490217325E900E493A1 /* Currently.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currently.swift; path = ../../../Downloads/Currently.swift; sourceTree = "<group>"; };
 		41D50491217325E900E493A1 /* Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Daily.swift; path = ../../../Downloads/Daily.swift; sourceTree = "<group>"; };
 		41D50492217325E900E493A1 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../../Downloads/Data.swift; sourceTree = "<group>"; };
-		41D50493217325E900E493A1 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json4Swift_Base.swift; path = ../../../Downloads/Json4Swift_Base.swift; sourceTree = "<group>"; };
-		41D50494217325E900E493A1 /* Minutely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Minutely.swift; path = ../../../Downloads/Minutely.swift; sourceTree = "<group>"; };
-		41D50495217325E900E493A1 /* Hourly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hourly.swift; path = ../../../Downloads/Hourly.swift; sourceTree = "<group>"; };
+		41D50493217325E900E493A1 /* WeatherForecastBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherForecastBase.swift; path = ../../../Downloads/WeatherForecastBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,20 +103,15 @@
 		3F1E2FBE216CA88A0051CF17 /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
-				41D50490217325E900E493A1 /* Currently.swift */,
 				41D50491217325E900E493A1 /* Daily.swift */,
 				41D50492217325E900E493A1 /* Data.swift */,
-				41D5048F217325E900E493A1 /* Flags.swift */,
-				41D50495217325E900E493A1 /* Hourly.swift */,
-				41D50493217325E900E493A1 /* Json4Swift_Base.swift */,
-				41D50494217325E900E493A1 /* Minutely.swift */,
+				41D50493217325E900E493A1 /* WeatherForecastBase.swift */,
 				3F1E2FBF216CA88A0051CF17 /* AppDelegate.swift */,
 				3F1E2FC1216CA88A0051CF17 /* ViewController.swift */,
 				3F1E2FC3216CA88A0051CF17 /* Main.storyboard */,
 				3F1E2FC6216CA8920051CF17 /* Assets.xcassets */,
 				3F1E2FC8216CA8920051CF17 /* LaunchScreen.storyboard */,
 				3F1E2FCB216CA8920051CF17 /* Info.plist */,
-				41D5048D21706ACC00E493A1 /* WeatherForecastModel.swift */,
 			);
 			path = WeatherForecast;
 			sourceTree = "<group>";
@@ -281,14 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D50499217325E900E493A1 /* Data.swift in Sources */,
-				41D5048E21706ACC00E493A1 /* WeatherForecastModel.swift in Sources */,
 				3F1E2FC2216CA88A0051CF17 /* ViewController.swift in Sources */,
-				41D50497217325E900E493A1 /* Currently.swift in Sources */,
-				41D5049B217325E900E493A1 /* Minutely.swift in Sources */,
 				3F1E2FC0216CA88A0051CF17 /* AppDelegate.swift in Sources */,
-				41D5049C217325E900E493A1 /* Hourly.swift in Sources */,
-				41D5049A217325E900E493A1 /* Json4Swift_Base.swift in Sources */,
-				41D50496217325E900E493A1 /* Flags.swift in Sources */,
+				41D5049A217325E900E493A1 /* WeatherForecastBase.swift in Sources */,
 				41D50498217325E900E493A1 /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
