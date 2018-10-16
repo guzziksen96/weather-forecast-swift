@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: Properties
-    
+    @IBOutlet weak var timezone: UILabel!
     @IBOutlet weak var minTemp: UILabel!
     @IBOutlet weak var maxTemp: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
@@ -21,26 +21,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var summary: UILabel!
     @IBOutlet weak var pictogram: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
     
     private var myData: [Data]?
     private var index: Int = 0
+    
     //MARK: Actions
     
-    
     @IBAction func displayNextDayForecastWeather(_ sender: UIButton) {
+        self.previousButton.isEnabled = true
         if((myData?.count)! > index + 1){
             index = index + 1
             displayData(data: myData![self.index])
         }else{
             displayAlert(text: "next")
+            if(index == (myData?.count)! - 1){
+                self.nextButton.isEnabled = false
+            }
         }
     }
     
     @IBAction func displayPreviousDayForecastWeather(_ sender: UIButton) {
+        self.nextButton.isEnabled = true
         if(index - 1 > 0){
             index = index - 1
+            displayData(data: myData![self.index])
         } else{
             displayAlert(text: "previous")
+            if(index == 1){
+                self.previousButton.isEnabled = false
+            }
         }
     }
     
@@ -53,8 +64,9 @@ class ViewController: UIViewController {
             
             self.myData = weatherForecast.daily?.data
             self.displayData(data: fetchData)
+            
+            self.timezone.text = weatherForecast.timezone
         }
-        
     }
     
     private func displayData(data: Data) {
@@ -69,6 +81,7 @@ class ViewController: UIViewController {
         windSpeed.text = String(data.windSpeed!)
         windDirection.text = windDirectionFromBearing(bearingWing: Double(data.windBearing!))
         date.text = convertTimestampToDate(time: data.time!)
+        
     }
     
     let weatherForecastUrl = URL(string: "https://api.darksky.net/forecast/813dcd329357b2039f8650fbf84c481e/37.8267,-122.4233")!
@@ -89,13 +102,13 @@ class ViewController: UIViewController {
                     
                 } catch {
                     print(error.localizedDescription)
-                
                 }
         }
         task.resume()
     }
     
     private func convertTimestampToDate(time: Int) -> String {
+        
         let date = Date(timeIntervalSince1970: TimeInterval(time))
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = DateFormatter.Style.medium
